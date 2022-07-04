@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Simple FB2 Reader</string>
+    <string name="main">Главная</string>
+    <string name="menu">Меню</string>
+    <string name="choose_fb2_book">"Выберите FB2 книгу"</string>
+    <string name="device">Устройство</string>
+    <string name="litres">Библиотека Литрес</string>
+    <string name="add">Добавить книгу</string>
+    <string-array name="add_section_buttons">
+<!--        <item>Библиотека Литрес</item>-->
+        <item>Устройство</item>
+    </string-array>
+</resources>
