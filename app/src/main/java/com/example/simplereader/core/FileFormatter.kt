@@ -1,8 +1,8 @@
-package com.example.simplereader.utils
+package com.example.simplereader.core
 
 import android.net.Uri
 
-object FilesUtils {
+class FileFormatter {
     fun pathOfUri(uri: Uri?): String {
         return uri?.path.toString()
     }

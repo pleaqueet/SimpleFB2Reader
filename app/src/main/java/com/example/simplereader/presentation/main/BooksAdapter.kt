@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.simplereader.data.room.Book
+import com.example.simplereader.data.model.Book
 import com.example.simplereader.databinding.ItemAddSectionButtonBinding
 import com.example.simplereader.presentation.add.OnButtonClickListener
 

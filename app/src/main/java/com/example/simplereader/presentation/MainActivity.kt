@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.simplereader.R
 import com.example.simplereader.databinding.ActivityMainBinding
-import com.example.simplereader.presentation.add.AddFragment
+import com.example.simplereader.presentation.add.AddBooksFragment
 import com.example.simplereader.presentation.main.MainFragment
 import com.example.simplereader.presentation.menu.MenuFragment
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,10 +21,11 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(MainFragment())
         title = "Главная"
 
+
         binding.mainBottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.add_item -> {
-                    replaceFragment(AddFragment())
+                    replaceFragment(AddBooksFragment())
                     title = "Добавить книгу"
                 }
                 R.id.main_item -> {

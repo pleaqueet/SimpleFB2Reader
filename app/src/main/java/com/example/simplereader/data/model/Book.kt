@@ -1,4 +1,4 @@
-package com.example.simplereader.data.room
+package com.example.simplereader.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -14,5 +14,9 @@ data class Book(
     @ColumnInfo(name = "author")
     val author: String,
     @ColumnInfo(name = "file_format")
-    val fileFormat: String
+    val fileFormat: String,
+    @ColumnInfo(name = "description")
+    val description: String,
+    @ColumnInfo(name = "body")
+    val body: String
 )

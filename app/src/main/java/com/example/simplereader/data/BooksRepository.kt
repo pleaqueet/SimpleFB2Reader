@@ -1,6 +1,6 @@
 package com.example.simplereader.data
 
-import com.example.simplereader.data.room.Book
+import com.example.simplereader.data.model.Book
 import com.example.simplereader.data.room.BookDao
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

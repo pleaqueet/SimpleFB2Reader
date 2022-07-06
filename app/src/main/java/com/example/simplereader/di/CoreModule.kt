@@ -1,8 +1,8 @@
 package com.example.simplereader.di
 
 import android.content.Context
-import androidx.room.Room
-import com.example.simplereader.data.room.BooksDatabase
+import com.example.simplereader.core.FB2BookParser
+import com.example.simplereader.core.FileFormatter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,17 +12,13 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object CoreModule {
     @Singleton
     @Provides
-    fun provideBooksDatabase(@ApplicationContext applicationContext: Context) =
-        Room.databaseBuilder(
-            applicationContext,
-            BooksDatabase::class.java,
-            "books"
-        ).build()
+    fun provideFB2Parser(@ApplicationContext applicationContext: Context, fileFormatter: FileFormatter) =
+        FB2BookParser(applicationContext, fileFormatter)
 
     @Singleton
     @Provides
-    fun provideBookDao(db: BooksDatabase) = db.getBookDao()
+    fun provideFileFormatter() = FileFormatter()
 }

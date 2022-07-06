@@ -10,17 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.simplereader.R
-import com.example.simplereader.data.room.Book
-import com.example.simplereader.databinding.FragmentAddBinding
-import com.example.simplereader.presentation.BooksViewModel
-import com.example.simplereader.utils.AndroidUtils.toast
-import com.example.simplereader.utils.FB2ParserUtils
-import com.example.simplereader.utils.FilesUtils
+import com.example.simplereader.databinding.FragmentAddBooksBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AddFragment : Fragment() {
-    private lateinit var binding: FragmentAddBinding
+class AddBooksFragment : Fragment() {
+    private val TAG: String = this::class.java.simpleName
+    private lateinit var binding: FragmentAddBooksBinding
     private val viewModel: AddBooksViewModel by viewModels()
 
     override fun onCreateView(
@@ -28,7 +24,7 @@ class AddFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAddBinding.inflate(inflater, container, false)
+        binding = FragmentAddBooksBinding.inflate(inflater, container, false)
 
         initRecyclerView()
 
